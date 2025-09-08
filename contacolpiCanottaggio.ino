@@ -182,7 +182,6 @@ void sendData(){
     char c = Serial2.read();
     Serial.print(c);
     gps.encode(c);
-    // Se vuoi anche vedere i dati grezzi NMEA:
   }
 
   //GPS
