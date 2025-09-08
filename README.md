@@ -18,3 +18,5 @@ Librerie Usate:
 - TinyGPS++.h: libreria per decodificare le stringhe NMEA proveniente dal modulo GPS estraendo latitudine e longitudine. Inoltre utile per estrarre la velocità tramite funzioni.
 
 La pagina web è stata scritta tramite HTML e la grafica tramite bootstrap, un framework CSS che fornisce stili già pronti all'uso. L'ho utilizzato solamente per renderlo visibilmente più bello. Oltre a HTML ho usato codice JavaScript per andare ad aggiornare i dati in tempo reale senza dover ricaricare la pagina.  
+
+All'avvio del programma l'ESP32 si collega alla rete WiFi, viene creato un server web locale visibile a tutti i dispositivi sulla stessa rete. I dati vengono costantemente aggiornati tramite chiamate fetch. Sono stati fatti inoltre dei controlli per risolvere i prolemi riguardanti il rumore che possono ricevere i diversi sensori: per il GPS si ignora un movimento inferiore ai 5m. I nodi inferiori a 3 vengono considerati rumore. 
